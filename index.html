@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio web page.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header role="banner">
+        <div class="title-wrapper">
+            <div class = "header-logo">
+                Logo here
+            </div>
+            <h1>A Portfolio Webpage</h1>
+        </div>
+        <nav class = "hamburger-menu">
+            <button class="menu-toggle" id="men-tog" title="Toggle Navigation Menu" onclick="toggleNavMenu()">&Congruent;</button>
+            <ul class="togglable-menu" id="tog-men">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class = "normal-main" id="the-normal-main">
+    <section id="about" role="region"></section>
+        <h2>About Me</h2>
+        <p>This is the about me section.</p>
+    </section>
+    
+    <section id="projects" role="region">
+        <h2>Projects</h2>
+        <article role="article" class="project-card">
+            <h3>Project 1</h3>
+            <figure>
+                <img src="project1.jpg" alt="Project 1 pic">
+                <figcaption>Project 1 Description</figcaption>
+            </figure>
+            <p>Details about Project 1.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eaque minus eum, magni esse dolorem ipsam quaerat vitae quos eveniet eos odit adipisci aliquid! Nemo ratione qui odio mollitia iure?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis quas vitae expedita quod hic corporis velit quibusdam amet repellat! Esse itaque praesentium corrupti eligendi, porro doloribus. Sunt libero neque blanditiis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rerum saepe cum alias veniam repellendus ut doloribus aliquam accusamus, a quibusdam officiis corrupti amet sequi, facere vero asperiores ducimus beatae?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia explicabo maxime vitae laborum perspiciatis eos molestias fugit enim voluptates consectetur officia, repellendus ullam veritatis est obcaecati doloremque architecto sit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo architecto error vero delectus corporis ipsum mollitia excepturi numquam quas officia dolorem earum commodi voluptate ad, tempora consequatur, deserunt inventore neque!
+            </p>
+        </article>
+        <article role="article" class="project-card">
+            <h3>Project 2</h3>
+            <figure>
+                <img src="project2.jpg" alt="Project 2 pic">
+                <figcaption>Project 2 Description</figcaption>
+            </figure>
+            <p>Details about Project 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum veniam sunt aliquam voluptas fugit minus ratione qui, error ab saepe blanditiis quisquam sapiente deserunt vitae consequuntur ducimus sed iusto!</p>
+        </article>
+        <article role="article" class="project-card">
+            <h3>Project 3</h3>
+            <figure>
+                <img src="project3.jpg" alt="Project 3 pic">
+                <figcaption>Project 3 Description.</figcaption>
+            </figure>
+            <p>Details about Project 3. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate sit totam laudantium? Placeat a dicta nam facere asperiores dolores, magnam similique nesciunt sit debitis nobis iusto. Cumque voluptatem nobis commodi.</p>
+        </article>
+    </section>
+
+    <section id="skills" role="region">
+        <h2>Skills</h2>
+        <ul>
+            <li><b>Skill 1</b> <p>Some details about skill 1</p></li>
+            <li><b>Skill 2</b> <p>Some details about skill 2</p></li>
+            <li><b>Skill 3</b> <p>Some details about skill 3</p></li>
+            <li><b>Skill 4</b> <p>Some details about skill 4</p></li>
+            <li><b>Skill 5</b> <p>Some details about skill 5</p></li>
+        </ul>
+    </section>
+
+    <section id="contact" role="region">
+        <h2>Contact</h2>
+        <form class="contact-form" action="submit_form.php" method="post" role="form">
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    </main>
+
+    <!-- A modal view with a lightbox for the projects -->
+    <main class="modal-lightbox" id="the-modal-lightbox">
+        <div class="modal-lightbox-control close"><button id="close-lightbox" onclick="closeModal()" title="Close lightbox-mode">&times</button></div>
+        <div class="modal-lightbox-control prev"><button title="Previous Project" onclick="prevPage()">&#10094</button></div>
+        <div class="modal-lightbox-container"></div>
+        <div class="modal-lightbox-control next"><button title="Next Project" onclick="nextPage()">&#10095</button></div>
+    </main>
+
+    <footer>
+        <p>Some footer information.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color:darkred;
+    color: black;
+    text-align: center;
+    position: fixed;
+    top : 0;
+    width:100%;
+    height: 4rem;
+    min-height: 64px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+header .title-wrapper{
+    margin:0;
+    height:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items:center;
+    justify-content:start;
+}
+
+header .header-logo{
+    height: 100%;
+    width:4rem;
+    max-width: 64px;
+    max-height: 64px;
+    background-color: antiquewhite;
+    margin:0;
+}
+header h1 {
+    margin:0;
+    padding: .3rem .5rem;
+    font-size: 1.5rem;
+}
+
+
+header nav {
+    height: 100%;
+    min-width:32px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+/* Navigation Styles */
+nav {
+    background-color: #c75353;
+    min-width: 50px;
+    width:3rem;
+    color: black;
+    padding: 0;
+    text-align: center;
+}
+
+nav > .menu-toggle{
+    display: block;
+    height:100%;
+    margin:0;
+    font-size: 1.9rem;
+    font-weight: bolder;
+    text-align: center;
+    border:none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    box-sizing:border-box;
+}
+
+nav > .menu-toggle:hover{
+    color:white;
+    text-decoration: none;
+}
+nav > .menu-toggle:focus-within{
+    /* box-shadow: inset 5px 5px 0px 0px white; */
+    border: .2rem solid;
+    color:white
+}
+
+
+nav .togglable-menu {
+    display: flex;
+    background-color: #c75353;
+    flex-flow: row wrap;
+    color:blacK;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-items: center;
+    position: absolute;
+}
+
+nav .togglable-menu li {
+    margin: .5rem;
+    align-content: center;
+    color:black;
+}
+
+nav .togglable-menu a{
+    text-decoration:none;
+    color:inherit;
+}
+
+nav .togglable-menu li:hover li:focus-within{
+    color:white;
+}
+
+nav .togglable-menu li:focus-within{
+    color:white;
+}
+
+#tog-men{
+    display: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 40rem) {
+
+    nav .togglable-menu{
+        top: 4rem;
+        right: 0;
+        width:100vw;
+        justify-content: space-around;
+    }
+
+}
+
+@media(min-width: 40.1rem){
+    nav .togglable-menu{
+        width: max-content;
+        top: 0;
+        right: 3rem;
+        height: 4rem;
+    }
+}
+
+/* Main Content Styles */
+main {
+    margin-top: 4rem;
+    margin-bottom: 3.2rem;
+    padding-top: .1rem;
+    padding-bottom: .5rem;
+    padding-left: .3rem;
+}
+
+/* Projects Section Styles */
+.projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 20px;
+}
+
+.project-card {
+    display:inline-block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 40vh;
+    overflow-y: scroll;
+    margin: 10px;
+    padding: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+
+@media (max-width: 50rem){
+    .project-card{
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 60rem) and (min-width: 40.01rem){
+    .project-card{
+        width: calc(50% - 25px);
+    }
+}
+
+@media (min-width: 60.01rem){
+    .project-card{
+        width: calc(33% - 20px);
+    }
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    object-fit:contain;
+    text-align: center;
+    line-height: 4em;
+    background-color: antiquewhite;
+    color: black;
+    height: 20vh;
+    margin-bottom: .2em;
+}
+
+.project-card figure{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    box-sizing: border-box;
+    width: calc(100% - 10px - 0.5em);
+}
+
+
+.project-card h3 {
+    margin: .3em 0.5em .1em;
+    font-size: 1.2em;
+}
+
+.project-card p {
+    margin: 0 0.6em 10px;
+    color: #666;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-card a:hover {
+    background-color: #555;
+}
+
+@media (max-width: 500px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Contact Form Styles */
+
+.contact-form {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+@media (min-width: 800px) {
+
+    .contact-form{
+        display:grid;
+        grid-template-areas:
+        "label1 name label2 email"
+        "label textarea textarea textarea"
+        "button button button button";
+        grid-template-columns: max-content auto min-content auto;
+    }
+
+    .contact-form > label{
+        grid-area: label;
+        padding: 10px;
+    }
+
+    .contact-form > #name-label{
+        grid-area: label1;
+    }
+
+    .contact-form > #email-label{
+        grid-area: label2;
+        margin-left: 1em;
+    }
+
+    .contact-form > #email{
+        grid-area: email;
+    }
+
+    .contact-form > #name{
+        grid-area: name
+    }
+
+    .contact-form > textarea{
+        grid-area: textarea;
+    }
+
+    .contact-form > button{
+        grid-area: button;
+    }
+}
+
+/* Skills Section Styles */
+
+#skills h2 {
+    margin-bottom: 20px;
+}
+
+#skills ul {
+    list-style-position: outside;
+    padding: 0;
+}
+
+#skills li {
+    margin-bottom: 1.5em;
+    margin-left:3em;
+}
+
+#skills li::marker {
+    content: '✔  '; 
+    color: green; 
+    font-size: 1.2em; 
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    box-sizing:border-box;
+    height: 3.2rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/*Lightbox style*/
+
+.modal-lightbox{
+    display: none;
+    position: fixed;
+    bottom: 3.2em;
+    top:4rem;
+    width:100%;
+    height: auto;
+    margin:0;
+    padding:0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color:#333;
+    z-index: 2;
+
+    grid-template-columns: 1rem  1rem 8fr 1rem 1rem;
+    grid-template-rows: 1fr 5fr 1fr 5fr;
+    grid-template-areas: 
+    ".  .       .           close   ."
+    ".  .       container   .       ."
+    ".  prev    container   next    ."
+    ".  .       container   .       .";
+    row-gap: 0;
+}
+
+.modal-lightbox > .lightbox-header{
+    height: 2rem;
+    grid-area: head;
+    background-color: transparent;
+}
+
+.modal-lightbox .modal-lightbox-control button{
+    display:block;
+    width:1rem;
+    height:100%;
+    padding:0;
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size:2rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.modal-lightbox > .modal-lightbox-control button:hover{
+    color:white;
+}
+
+.modal-lightbox > .close{
+    height: 2rem;
+    grid-area: close;
+}
+
+.modal-lightbox-container{
+    display: block;
+    margin: 0;
+    padding:0;
+    grid-area: container;
+}
+
+.modal-lightbox > .prev{
+    grid-area: prev;
+    text-align:right;
+}
+
+.modal-lightbox > .next{
+    grid-area: next;
+    text-align: left;
+}
+
+.modal-lightbox-container > .project-card{
+    background-color:black;
+    color: lightgray;
+    cursor:default;
+    height:calc(100% - 20px);
+    width: auto;
+}
+
+.modal-lightbox-container > .project-card:hover{
+    transform: none;
+}
+
+.modal-lightbox-container > .project-card img{
+    height: 40vh;
+}
