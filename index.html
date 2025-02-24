@@ -82,7 +82,8 @@
 
     <section id="contact" role="region">
         <h2>Contact</h2>
-        <form class="contact-form" action="submit_form.php" method="get" role="form">
+        <form class="contact-form" role="form" onsubmit="event.preventDefault(); submitForm();">
+            <!-- replaced submit action function displaying a dialog-->
             <label for="name" id="name-label">Name:</label>
             <input type="text" id="name" name="name" required>
             

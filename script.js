@@ -87,3 +87,9 @@ function adjustTopMargin(){
     }
     else{normalMain.style.marginTop = '4rem';}
 }
+
+//Form related code
+
+function submitForm(){
+    alert('This is a sample page. The form is not functional.');
+}
